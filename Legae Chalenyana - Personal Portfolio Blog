@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legae Chalenyana - Personal Portfolio Blog</title>
+    <meta name="description" content="Personal digital portfolio blog showcasing academic and professional development">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3b82f6",
+                        secondary: "#1e40af",
+                        accent: "#f59e0b"
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .active-section {
+            background-color: #3b82f6;
+            color: white;
+        }
+        .section-content {
+            display: none;
+        }
+        .section-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h1 class="text-2xl font-bold text-gray-800">Legae Chalenyana</h1>
+                    <p class="text-gray-600">Digital Portfolio Blog</p>
+                </div>
+                <div class="flex flex-wrap gap-2 justify-center">
+                    <button onclick="showSection('home')" class="nav-btn px-4 py-2 rounded-lg bg-blue-600 text-white font-medium transition-colors duration-200 hover:bg-blue-700">Home</button>
+                    <button onclick="showSection('cv')" class="nav-btn px-4 py-2 rounded-lg bg-gray-200 text-gray-700 font-medium transition-colors duration-200 hover:bg-gray-300">CV</button>
+                    <button onclick="showSection('reflection')" class="nav-btn px-4 py-2 rounded-lg bg-gray-200 text-gray-700 font-medium transition-colors duration-200 hover:bg-gray-300">Academic Reflection</button>
+                    <button onclick="showSection('group-work')" class="nav-btn px-4 py-2 rounded-lg bg-gray-200 text-gray-700 font-medium transition-colors duration-200 hover:bg-gray-300">Group Work</button>
+                    <button onclick="showSection('skills')" class="nav-btn px-4 py-2 rounded-lg bg-gray-200 text-gray-700 font-medium transition-colors duration-200 hover:bg-gray-300">Skills & Projects</button>
+                    <button onclick="showSection('application')" class="nav-btn px-4 py-2 rounded-lg bg-gray-200 text-gray-700 font-medium transition-colors duration-200 hover:bg-gray-300">Application Letter</button>
+                    <button onclick="showSection('email')" class="nav-btn px-4 py-2 rounded-lg bg-gray-200 text-gray-700 font-medium transition-colors duration-200 hover:bg-gray-300">Email Template</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Home/About Me Section -->
+        <section id="home" class="section-content active">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="md:w-1/3">
+                        <img src="https://picsum.photos/300?random=1" alt="Legae Chalenyana portrait" class="w-full rounded-lg shadow-md" loading="lazy">
+                    </div>
+                    <div class="md:w-2/3">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">About Me</h2>
+                        <p class="text-lg text-gray-600 mb-4">Hello! I'm Legae Chalenyana, a 22-year-old student passionate about academic excellence and professional development.</p>
+                        
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Academic Background</h3>
+                        <p class="text-gray-600 mb-4">Currently pursuing my tertiary education with a focus on developing both technical and soft skills essential for the modern workplace.</p>
+                        
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Professional Interests</h3>
+                        <ul class="list-disc list-inside text-gray-600 mb-4 space-y-2">
+                            <li>Digital communication and personal branding</li>
+                            <li>Professional development and career growth</li>
+                            <li>Technology integration in education</li>
+                            <li>Team collaboration and project management</li>
+                        </ul>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="text-lg font-semibold text-blue-800 mb-2">Personal Philosophy</h4>
+                            <p class="text-blue-700">"Continuous learning and adaptation are key to success in today's rapidly evolving digital landscape."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CV/Resume Section -->
+        <section id="cv" class="section-content">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Curriculum Vitae</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2">
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">Education</h3>
+                            <div class="space-y-4">
+                                <div class="border-l-4 border-blue-500 pl-4">
+                                    <h4 class="font-semibold text-gray-800">Tertiary Education</h4>
+                                    <p class="text-gray-600">Current Student</p>
+                                    <p class="text-sm text-gray-500">2023 - Present</p>
+                                </div>
+                                <div class="border-l-4 border-green-500 pl-4">
+                                    <h4 class="font-semibold text-gray-800">High School Diploma</h4>
+                                    <p class="text-gray-600">Graduated with honors</p>
+                                    <p class="text-sm text-gray-500">2018 - 2022</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">Experience</h3>
+                            <div class="space-y-4">
+                                <div class="border-l-4 border-purple-500 pl-4">
+                                    <h4 class="font-semibold text-gray-800">Part-time Retail Assistant</h4>
+                                    <p class="text-gray-600">Developed customer service and communication skills</p>
+                                    <p class="text-sm text-gray-500">2023 - Present</p>
+                                </div>
+                                <div class="border-l-4 border-yellow-500 pl-4">
+                                    <h4 class="font-semibold text-gray-800">Volunteer Tutor</h4>
+                                    <p class="text-gray-600">Mentored high school students in mathematics and science</p>
+                                    <p class="text-sm text-gray-500">2022 - 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">Skills</h3>
+                            <div class="space-y-3">
+                                <div>
+                                    <h4 class="font-semibold text-gray-700">Technical Skills</h4>
+                                    <ul class="list-disc list-inside text-sm text-gray-600 ml-2">
+                                        <li>Microsoft Office Suite</li>
+                                        <li>Digital Communication Tools</li>
+                                        <li>Basic Web Development</li>
+                                        <li>Social Media Management</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-700">Soft Skills</h4>
+                                    <ul class="list-disc list-inside text-sm text-gray-600 ml-2">
+                                        <li>Team Collaboration</li>
+                                        <li>Time Management</li>
+                                        <li>Problem Solving</li>
+                                        <li>Adaptive Learning</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">Certifications</h3>
+                            <ul class="list-disc list-inside text-sm text-gray-600 space-y-2">
+                                <li>Digital Literacy Certification</li>
+                                <li>First Aid Training</li>
+                                <li>Leadership Workshop Completion</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Reflection Section -->
+        <section id="reflection" class="section-content">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Academic Journey Reflection</h2>
+                <div class="prose max-w-none">
+                    <p class="text-gray-700 mb-4">My transition into tertiary education has been a transformative journey marked by significant personal and academic growth. The shift from structured high school learning to the autonomous nature of university life required substantial adaptation.</p>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Time Management Evolution</h3>
+                    <p class="text-gray-700 mb-4">Initially, I struggled with the freedom and flexibility that tertiary education offered. The absence of constant supervision meant I had to develop robust time management strategies. I implemented techniques like the Pomodoro method and digital calendaring to structure my study sessions effectively.</p>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Adapting to Learning Styles</h3>
+                    <p class="text-gray-700 mb-4">University demanded a more proactive approach to learning. I discovered that passive listening in lectures wasn't sufficient—I needed to engage actively with the material through note-taking, group discussions, and self-directed research. This shift from being taught to learning independently was challenging but ultimately rewarding.</p>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Growth Mindset Development</h3>
+                    <p class="text-gray-700 mb-4">Perhaps the most valuable lesson has been embracing a growth mindset. Early setbacks in complex subjects taught me that intelligence isn't fixed but can be developed through persistence and effective strategies. I learned to view challenges as opportunities for growth rather than insurmountable obstacles.</p>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Study Habit Refinement</h3>
+                    <p class="text-gray-700 mb-4">My study habits evolved significantly. I moved from last-minute cramming to spaced repetition and interleaved practice. Creating dedicated study environments and eliminating digital distractions became crucial for maintaining focus and productivity.</p>
+                    
+                    <div class="bg-green-50 p-4 rounded-lg mt-6">
+                        <h4 class="text-lg font-semibold text-green-800 mb-2">Key Takeaways</h4>
+                        <ul class="list-disc list-inside text-green-700 space-y-1">
+                            <li>Self-discipline is the foundation of academic success</li>
+                            <li>Effective learning requires active engagement</li>
+                            <li>Resilience transforms challenges into growth opportunities</li>
+                            <li>Continuous adaptation is essential in evolving educational landscapes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Group Work Reflection Section -->
+        <section id="group-work" class="section-content">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Group Work Experience Reflection</h2>
+                <div class="prose max-w-none">
+                    <p class="text-gray-700 mb-4">This semester's group project provided valuable insights into team dynamics and collaborative work. Using Tuckman's stages of group development as a framework, I'll reflect on our journey from formation to completion.</p>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Forming Stage</h3>
+                    <p class="text-gray-700 mb-4">Our group was formed through random assignment, meaning I didn't know my group mates beforehand. The initial phase was characterized by polite formality as we cautiously explored each other's strengths and working styles. We spent our first meeting establishing basic guidelines, exchanging contact information, and discussing project expectations. There was a sense of uncertainty as we navigated this new collaborative relationship.</p>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Storming Stage</h3>
+                    <p class="text-gray-700 mb-4">As we delved deeper into the project, differences in work approaches emerged. One member preferred detailed planning while another favored rapid prototyping. This led to tension during our second week when deadlines approached and task allocation became contentious. The storming phase was challenging but necessary—it forced us to address underlying conflicts and establish clearer communication protocols.</p>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Norming Stage</h3>
+                    <p class="text-gray-700 mb-4">Through open dialogue and compromise, we developed shared expectations and routines. We implemented a rotating facilitation system where each member led meetings on a weekly basis. This distributed leadership approach helped balance different working styles and ensured everyone's voice was heard. We established regular check-ins and created a shared digital workspace that became our collaborative hub.</p>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Performing Stage</h3>
+                    <p class="text-gray-700 mb-4">By the project's midpoint, we had developed into a cohesive, functioning team. Communication flowed naturally, and we could anticipate each other's needs and working patterns. The trust built during the norming stage allowed for efficient task delegation and execution. We celebrated small milestones together, which reinforced our team cohesion and motivation.</p>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Adjourning Stage</h3>
+                    <p class="text-gray-700 mb-4">Our project concluded with a comprehensive debrief session where we reflected on both our final output and our collaborative process. We acknowledged the growth we'd experienced individually and as a team. While there were moments of friction throughout the semester, we parted with mutual respect and appreciation for the diverse perspectives each member brought to the project.</p>
+                    
+                    <div class="bg-blue-50 p-4 rounded-lg mt-6">
+                        <h4 class="text-lg font-semibold text-blue-800 mb-2">Lessons Learned About Teamwork</h4>
+                        <ul class="list-disc list-inside text-blue-700 space-y-1">
+                            <li>Effective communication requires both speaking and active listening</li>
+                            <li>Conflict, when managed constructively, can strengthen team bonds</li>
+                            <li>Clear role definition prevents task duplication and gaps</li>
+                            <li>Regular feedback loops are essential for continuous improvement</li>
+                            <li>Diverse working styles, when leveraged properly, enhance creativity</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Projects Section -->
+        <section id="skills" class="section-content">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Skills & Projects</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    <!-- Skill 1 -->
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-file-excel text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Microsoft Excel</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Advanced proficiency in data analysis, formulas, pivot tables, and data visualization.</p>
+                        <div class="flex justify-center">
+                            <img src="https://picsum.photos/250/150?random=2" alt="Excel dashboard example" class="rounded-lg shadow-md" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Skill 2 -->
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-palette text-green-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Canva Design</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Creating professional presentations, social media graphics, and marketing materials.</p>
+                        <div class="flex justify-center">
+                            <img src="https://picsum.photos/250/150?random=3" alt="Design portfolio example" class="rounded-lg shadow-md" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Skill 3 -->
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-chart-bar text-purple-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Data Analysis</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Interpreting data trends, creating reports, and providing actionable insights.</p>
+                        <div class="flex justify-center">
+                            <img src="https://picsum.photos/250/150?random=4" alt="Data analysis project" class="rounded-lg shadow-md" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-yellow-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Featured Projects</h3>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-yellow-500 pl-4">
+                            <h4 class="font-semibold text-gray-800">Academic Research Presentation</h4>
+                            <p class="text-gray-600">Comprehensive research project analyzing digital communication trends among students</p>
+                            <p class="text-sm text-gray-500">Tools: PowerPoint, Canva, Excel</p>
+                        </div>
+                        <div class="border-l-4 border-yellow-500 pl-4">
+                            <h4 class="font-semibold text-gray-800">Community Service Initiative</h4>
+                            <p class="text-gray-600">Organized and led a digital literacy workshop for local community members</p>
+                            <p class="text-sm text-gray-500">Skills: Leadership, Public Speaking, Event Planning</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Application Letter Section -->
+        <section id="application" class="section-content">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Industrial Attachment Application Letter</h2>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <div class="prose max-w-none">
+                        <div class="text-right mb-6">
+                            <p class="text-gray-600">Legae Chalenyana</p>
+                            <p class="text-gray-600">[Your Address]</p>
+                            <p class="text-gray-600">[City, Postal Code]</p>
+                            <p class="text-gray-600">[Email Address]</p>
+                            <p class="text-gray-600">[Phone Number]</p>
+                            <p class="text-gray-600">[Date]</p>
+                        </div>
+
+                        <div class="mb-4">
+                            <p class="text-gray-600">Hiring Manager</p>
+                            <p class="text-gray-600">[Company Name]</p>
+                            <p class="text-gray-600">[Company Address]</p>
+                        </div>
+
+                        <p class="text-gray-700 mb-4"><strong>Subject: Application for Industrial Attachment Position</strong></p>
+
+                        <p class="text-gray-700 mb-4">Dear Hiring Manager,</p>
+
+                        <p class="text-gray-700 mb-4">I am writing to express my enthusiastic interest in the industrial attachment opportunity at [Company Name], as advertised on [Platform where you saw the advertisement]. As a dedicated [Your Field of Study] student at [Your University/Institution], I am eager to apply my academic knowledge and develop practical skills in a professional environment.</p>
+
+                        <p class="text-gray-700 mb-4">Throughout my academic journey, I have developed strong competencies in [mention 2-3 key skills relevant to the position]. My coursework in [relevant subjects] has provided me with a solid theoretical foundation, which I am keen to complement with hands-on experience. I have particularly excelled in [mention specific projects or achievements] where I demonstrated [specific abilities].</p>
+
+                        <p class="text-gray-700 mb-4">What draws me specifically to [Company Name] is your reputation for [mention something specific about the company - their innovation, values, projects, etc.]. I am impressed by your commitment to [specific company value or project] and believe my skills in [specific skill] and passion for [relevant field] align well with your organizational objectives.</p>
+
+                        <p class="text-gray-700 mb-4">During my attachment, I hope to contribute to your team by bringing [mention what you can offer - fresh perspective, specific technical skills, research abilities, etc.]. I am particularly interested in gaining experience in [specific area you want to learn] and developing my abilities in [another specific area].</p>
+
+                        <p class="text-gray-700 mb-4">I am available for an industrial attachment from [start date] to [end date] and would welcome the opportunity to discuss how my academic background and enthusiasm can benefit your organization. Thank you for considering my application.</p>
+
+                        <p class="text-gray-700 mb-4">Sincerely,</p>
+                        
+                        <p class="text-gray-700">Legae Chalenyana</p>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-blue-50 p-4 rounded-lg">
+                    <h4 class="text-lg font-semibold text-blue-800 mb-2">Template Instructions</h4>
+                    <ul class="list-disc list-inside text-blue-700 text-sm space-y-1">
+                        <li>Replace bracketed information [ ] with your specific details</li>
+                        <li>Customize the skills and experiences to match the company's needs</li>
+                        <li>Research the company to make your letter more specific and compelling</li>
+                        <li>Keep the tone professional and enthusiastic</li>
+                        <li>Proofread carefully before sending</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Email Template Section -->
+        <section id="email" class="section-content">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Professional Email Template</h2>
+                
+                <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                    <div class="prose max-w-none">
+                        <p class="text-gray-600 mb-2"><strong>Subject:</strong> Job Application - [Position Title] - Legae Chalenyana</p>
+                        
+                        <p class="text-gray-700 mb-4">Dear [Hiring Manager Name or "Hiring Team"],</p>
+
+                        <p class="text-gray-700 mb-4">I am writing to express my interest in the [Position Title] position at [Company Name], which I discovered through [Source - e.g., your company website, job portal, referral].</p>
+
+                        <p class="text-gray-700 mb-4">As a [Your Current Status - e.g., dedicated student] with experience in [Your Field], I have developed strong skills in [mention 2-3 key skills relevant to the position]. My background in [mention relevant experience or education] has prepared me to contribute effectively to your team.</p>
+
+                        <p class="text-gray-700 mb-4">I have attached my CV and cover letter for your review. I would welcome the opportunity to discuss how my qualifications and enthusiasm can benefit [Company Name].</p>
+
+                        <p class="text-gray-700 mb-4">Thank you for your time and consideration. I look forward to the possibility of discussing this opportunity further.</p>
+
+                        <p class="text-gray-700 mb-2">Best regards,</p>
+                        <p class="text-gray-700">Legae Chalenyana</p>
+                        <p class="text-gray-600 text-sm">[Your Phone Number] | [Your Email Address]</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h4 class="text-lg font-semibold text-green-800 mb-2">Email Best Practices</h4>
+                        <ul class="list-disc list-inside text-green-700 text-sm space-y-1">
+                            <li>Use a professional email address</li>
+                            <li>Keep the subject line clear and specific</li>
+                            <li>Address the recipient properly</li>
+                            <li>Be concise and to the point</li>
+                            <li>Proofread for spelling and grammar</li>
+                            <li>Attach documents as PDF files</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                        <h4 class="text-lg font-semibold text-purple-800 mb-2">Customization Tips</h4>
+                        <ul class="list-disc list-inside text-purple-700 text-sm space-y-1">
+                            <li>Personalize for each company</li>
+                            <li>Mention specific company achievements</li>
+                            <li>Highlight relevant skills for the role</li>
+                            <li>Research the hiring manager's name</li>
+                            <li>Follow up if no response in 1-2 weeks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Legae Chalenyana</h3>
+                    <p class="text-gray-300">Digital Portfolio Blog</p>
+                    <p class="text-gray-300 mt-2">Showcasing academic and professional development journey.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><button onclick="showSection('home')" class="text-gray-300 hover:text-white transition-colors">Home</button></li>
+                        <li><button onclick="showSection('cv')" class="text-gray-300 hover:text-white transition-colors">CV</button></li>
+                        <li><button onclick="showSection('skills')" class="text-gray-300 hover:text-white transition-colors">Skills & Projects</button></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-300">Email: [Your Email]</p>
+                    <p class="text-gray-300">Phone: [Your Phone]</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center">
+                <p class="text-gray-400">&copy; 2024 Legae Chalenyana. All rights reserved.</p>
+                <p class="text-gray-400 text-sm mt-2">Personal Digital Portfolio Blog - Academic Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation functionality
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section-content').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Update navigation buttons
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'text-white');
+                btn.classList.add('bg-gray-200', 'text-gray-700');
+            });
+            
+            // Highlight current section button
+            const currentBtn = Array.from(document.querySelectorAll('.nav-btn')).find(btn => 
+                btn.getAttribute('onclick')?.includes(sectionId)
+            );
+            if (currentBtn) {
+                currentBtn.classList.remove('bg-gray-200', 'text-gray-700');
+                currentBtn.classList.add('bg-blue-600', 'text-white');
+            }
+        }
+
+        // Initialize first section as active
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('home');
+        });
+
+        // Prevent default anchor behavior
+        document.querySelectorAll('a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+            });
+        });
+    </script>
+</body>
+</html>
